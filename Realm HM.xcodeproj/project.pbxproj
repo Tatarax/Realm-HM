@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8C26CA1629E9D10E00784398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA1529E9D10E00784398 /* AppDelegate.swift */; };
 		8C26CA1829E9D10E00784398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA1729E9D10E00784398 /* SceneDelegate.swift */; };
-		8C26CA1A29E9D10E00784398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA1929E9D10E00784398 /* ViewController.swift */; };
 		8C26CA1D29E9D10E00784398 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C26CA1B29E9D10E00784398 /* Main.storyboard */; };
 		8C26CA1F29E9D10F00784398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C26CA1E29E9D10F00784398 /* Assets.xcassets */; };
 		8C26CA2229E9D10F00784398 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C26CA2029E9D10F00784398 /* LaunchScreen.storyboard */; };
@@ -18,13 +17,14 @@
 		8C26CA2F29E9D1CB00784398 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA2E29E9D1CB00784398 /* StorageManager.swift */; };
 		8C26CA3129E9DB4F00784398 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA3029E9DB4F00784398 /* TaskList.swift */; };
 		8C26CA3729E9DCFD00784398 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA3629E9DCFD00784398 /* AlertController.swift */; };
+		8CB75D4E29EB3AF200F5D66D /* MainTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB75D4D29EB3AF200F5D66D /* MainTaskViewController.swift */; };
+		8CB75D5029EB3B0900F5D66D /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C26CA1229E9D10E00784398 /* Realm HM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm HM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C26CA1529E9D10E00784398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C26CA1729E9D10E00784398 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8C26CA1929E9D10E00784398 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8C26CA1C29E9D10E00784398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C26CA1E29E9D10F00784398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C26CA2129E9D10F00784398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +32,8 @@
 		8C26CA2E29E9D1CB00784398 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8C26CA3029E9DB4F00784398 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		8C26CA3629E9DCFD00784398 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		8CB75D4D29EB3AF200F5D66D /* MainTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaskViewController.swift; sourceTree = "<group>"; };
+		8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,12 +71,11 @@
 		8C26CA1429E9D10E00784398 /* Realm HM */ = {
 			isa = PBXGroup;
 			children = (
-				8C26CA1529E9D10E00784398 /* AppDelegate.swift */,
-				8C26CA1729E9D10E00784398 /* SceneDelegate.swift */,
-				8C26CA1929E9D10E00784398 /* ViewController.swift */,
-				8C26CA1B29E9D10E00784398 /* Main.storyboard */,
+				8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */,
+				8CB75D5229EB3B2900F5D66D /* Storyboard */,
+				8CB75D5329EB3B4500F5D66D /* Scene */,
+				8CB75D5129EB3B1700F5D66D /* App */,
 				8C26CA1E29E9D10F00784398 /* Assets.xcassets */,
-				8C26CA2029E9D10F00784398 /* LaunchScreen.storyboard */,
 				8C26CA2329E9D10F00784398 /* Info.plist */,
 			);
 			path = "Realm HM";
@@ -99,9 +100,35 @@
 		8C26CA3829E9E11200784398 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8CB75D4D29EB3AF200F5D66D /* MainTaskViewController.swift */,
 				8C26CA3629E9DCFD00784398 /* AlertController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8CB75D5129EB3B1700F5D66D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8C26CA1529E9D10E00784398 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8CB75D5229EB3B2900F5D66D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				8C26CA1B29E9D10E00784398 /* Main.storyboard */,
+				8C26CA2029E9D10F00784398 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8CB75D5329EB3B4500F5D66D /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				8C26CA1729E9D10E00784398 /* SceneDelegate.swift */,
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,9 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C26CA1A29E9D10E00784398 /* ViewController.swift in Sources */,
+				8CB75D4E29EB3AF200F5D66D /* MainTaskViewController.swift in Sources */,
 				8C26CA3129E9DB4F00784398 /* TaskList.swift in Sources */,
 				8C26CA1629E9D10E00784398 /* AppDelegate.swift in Sources */,
+				8CB75D5029EB3B0900F5D66D /* TasksViewController.swift in Sources */,
 				8C26CA1829E9D10E00784398 /* SceneDelegate.swift in Sources */,
 				8C26CA3729E9DCFD00784398 /* AlertController.swift in Sources */,
 				8C26CA2F29E9D1CB00784398 /* StorageManager.swift in Sources */,
