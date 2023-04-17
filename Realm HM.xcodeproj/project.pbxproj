@@ -17,6 +17,7 @@
 		8C26CA2F29E9D1CB00784398 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA2E29E9D1CB00784398 /* StorageManager.swift */; };
 		8C26CA3129E9DB4F00784398 /* TaskList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA3029E9DB4F00784398 /* TaskList.swift */; };
 		8C26CA3729E9DCFD00784398 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C26CA3629E9DCFD00784398 /* AlertController.swift */; };
+		8CAF065C29EDD48800B0379F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAF065B29EDD48800B0379F /* DataStore.swift */; };
 		8CB75D4E29EB3AF200F5D66D /* MainTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB75D4D29EB3AF200F5D66D /* MainTaskViewController.swift */; };
 		8CB75D5029EB3B0900F5D66D /* TasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		8C26CA2E29E9D1CB00784398 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		8C26CA3029E9DB4F00784398 /* TaskList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskList.swift; sourceTree = "<group>"; };
 		8C26CA3629E9DCFD00784398 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		8CAF065B29EDD48800B0379F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		8CB75D4D29EB3AF200F5D66D /* MainTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTaskViewController.swift; sourceTree = "<group>"; };
 		8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				8C26CA2E29E9D1CB00784398 /* StorageManager.swift */,
+				8CAF065B29EDD48800B0379F /* DataStore.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB75D4E29EB3AF200F5D66D /* MainTaskViewController.swift in Sources */,
+				8CAF065C29EDD48800B0379F /* DataStore.swift in Sources */,
 				8C26CA3129E9DB4F00784398 /* TaskList.swift in Sources */,
 				8C26CA1629E9D10E00784398 /* AppDelegate.swift in Sources */,
 				8CB75D5029EB3B0900F5D66D /* TasksViewController.swift in Sources */,

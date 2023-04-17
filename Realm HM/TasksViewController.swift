@@ -8,6 +8,8 @@
 import UIKit
 
 class TasksViewController: UITableViewController {
+    
+    var taskLists: TaskList!
 
     override func viewDidLoad() {
         super.viewDidLoad()
