@@ -73,7 +73,6 @@
 		8C26CA1429E9D10E00784398 /* Realm HM */ = {
 			isa = PBXGroup;
 			children = (
-				8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */,
 				8CB75D5229EB3B2900F5D66D /* Storyboard */,
 				8CB75D5329EB3B4500F5D66D /* Scene */,
 				8CB75D5129EB3B1700F5D66D /* App */,
@@ -104,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8CB75D4D29EB3AF200F5D66D /* MainTaskViewController.swift */,
+				8CB75D4F29EB3B0900F5D66D /* TasksViewController.swift */,
 				8C26CA3629E9DCFD00784398 /* AlertController.swift */,
 			);
 			path = ViewController;

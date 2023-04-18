@@ -32,4 +32,20 @@ extension UIAlertController {
             textField.text = taskList?.name
         }
     }
+    
+    func action(taskList: TaskList?, completion: @escaping(String, String) -> Void) {
+        
+        let doneButton = taskList == nil ? "Сохранить" : "Редактировать"
+        
+        let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
+            guard let newTitle = self.textFields?.first?.text else {return}
+            guard !newTitle.isEmpty else {return}
+            
+            if let newNote = self.textFields?.first?.text, !newNote.isEmpty {
+                completion(newTitle, newNote)
+            } else {
+                completion(newTitle, "")
+            }
+        }
+    }
 }
