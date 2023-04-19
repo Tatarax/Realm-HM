@@ -37,7 +37,7 @@ class TasksViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        section == 0 ? "В РАБОТЕ" : "ЗАВЕРШЕННЫЕ"
+        section == 0 ? "АКТИВНЫЕ" : "ЗАВЕРШЕННЫЕ"
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
