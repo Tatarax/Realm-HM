@@ -33,7 +33,7 @@ extension UIAlertController {
         }
     }
     
-    func action(taskList: TaskList?, completion: @escaping(String, String) -> Void) {
+    func action(taskList: Task?, completion: @escaping(String, String) -> Void) {
         
         let doneButton = taskList == nil ? "Сохранить" : "Редактировать"
         
@@ -46,6 +46,20 @@ extension UIAlertController {
             } else {
                 completion(newTitle, "")
             }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
+        
+        addAction(saveAction)
+        addAction(cancelAction)
+        addTextField(){ textField in
+            textField.placeholder = "New Task"
+            textField.text = taskList?.name
+        }
+        
+        addTextField(){ textField in
+            textField.placeholder = "New Note"
+            textField.text = taskList?.note
         }
     }
 }

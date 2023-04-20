@@ -65,9 +65,9 @@ extension TasksViewController {
         
         let alert = UIAlertController.createAlert(with: title, and: "Добавьте новую задачу")
         
-        alert.action(taskList: taskLists) { [unowned self] newTitle, newNote in
+        alert.action(taskList: task) { [unowned self] newTitle, newNote in
             if let _ = task, let _ = completion {
-                StorageManager.shared.edit(taskLists, newValue: newTitle)
+                
             } else {
                 self.save(task: newTitle, with: newNote)
             }
