@@ -25,6 +25,9 @@ class TasksViewController: UITableViewController {
             target: self,
             action: #selector (addButtonPressed)
         )
+        navigationItem.rightBarButtonItems = [addButton, editButtonItem]
+        curentTasks = taskLists.tasks.filter("isComplet = false")
+        completedTasks = taskLists.tasks.filter("isComplet = true")
     }
     
     // MARK: - Table view data source

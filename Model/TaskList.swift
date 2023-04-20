@@ -9,14 +9,14 @@ import Foundation
 import RealmSwift
 
 class TaskList: Object {
-    @Persisted var name: String
-    @Persisted var tasks: List<Task>
+    @Persisted var name = ""
+    @Persisted var tasks = List<Task>()
     @Persisted var date = Date()
 }
 
 class Task: Object {
-    @Persisted var name: String
-    @Persisted var note: String
+    @Persisted var name = ""
+    @Persisted var note = ""
     @Persisted var date = Date()
     @Persisted var isComplet = false
 }

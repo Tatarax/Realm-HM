@@ -20,14 +20,32 @@ class DataStore {
             let homeList = TaskList()
             homeList.name = "Home List"
             
-            let cookingHomeList = Task(value: ["name : Cooking", "note : Meat"])
-            let cleaningHomeList = Task(value: ["name : Cleaning", "note : Room", Date(), true])
+            //MARK: - Home Task()
+            let cookinHomeTask = Task()
+            cookinHomeTask.name = "Cooking"
+            cookinHomeTask.note = "Meat"
             
-            let reportWorkList = Task(value: ["name : Report", "note : Work Report"])
-            let dinnerWorkList = Task(value: ["name : Dinner", "note : One hours", Date(), true])
+            let cleanHomeTask = Task()
+            cleanHomeTask.name = "Cleaning"
+            cleanHomeTask.note = "Room"
+            cleanHomeTask.date = Date()
+            cleanHomeTask.isComplet = true
             
-            homeList.tasks.insert(contentsOf: [cookingHomeList, cleaningHomeList], at: 1)
-            workList.tasks.insert(contentsOf: [reportWorkList, dinnerWorkList], at: 1)
+            //MARK: - Work Task()
+            let reportWorkTask = Task()
+            reportWorkTask.name = "Report"
+            reportWorkTask.note = "Work report"
+            
+            let dinnerWorkTask = Task()
+            dinnerWorkTask.name = "Dinner"
+            dinnerWorkTask.note = "One hours"
+            dinnerWorkTask.date = Date()
+            dinnerWorkTask.isComplet = true
+            
+            homeList.tasks.append(cleanHomeTask)
+            homeList.tasks.append(cookinHomeTask)
+            workList.tasks.append(reportWorkTask)
+            workList.tasks.append(dinnerWorkTask)
             
             DispatchQueue.main.async {
                 StorageManager.shared.save([workList, homeList])
@@ -39,3 +57,10 @@ class DataStore {
     
     
 }
+
+//let cookingHomeList = Task(value: ["name" : "Cooking", "note" : "Meat"])
+//let cleaningHomeList = Task(value: ["Cleaning", "Room", Date(), true])
+
+
+//let reportWorkList = Task(value: ["name" : "Report", "note" : "Work Report"])
+//let dinnerWorkList = Task(value: ["Dinner", "One hours", Date(), true])
