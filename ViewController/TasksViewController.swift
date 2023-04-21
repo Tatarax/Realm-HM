@@ -56,6 +56,31 @@ class TasksViewController: UITableViewController {
     @objc private func addButtonPressed() {
         showAlert()
     }
+    
+    // MARK: - Table View Data Source
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let task = indexPath.section == 0 ? curentTasks[indexPath.row] : completedTasks[indexPath.row]
+        
+        let delete = UIContextualAction(style: .destructive, title: "Cancel") {_,_,_ in
+            StorageManager.shared.delete(task: task)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        }
+        
+        let edit = UIContextualAction(style: .normal, title: "Edit") { [unowned self] _,_,isDone in
+            showAlert(task: task) {
+                tableView.reloadRows(at: [indexPath], with: .automatic)
+            }
+            isDone(true)
+        }
+        
+        let done = UIContextualAction(style: .normal, title: "Done") {_,_, isDone in
+            StorageManager.shared.done(task: task)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+            isDone(true)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete, edit, done])
+    }
 }
     //MARK: - Extension
 extension TasksViewController {
@@ -66,16 +91,17 @@ extension TasksViewController {
         let alert = UIAlertController.createAlert(with: title, and: "Добавьте новую задачу")
         
         alert.action(taskList: task) { [unowned self] newTitle, newNote in
-            if let _ = task, let _ = completion {
-                
+            if let task = task, let completion = completion {
+                StorageManager.shared.edit(task: task, name: newTitle, note: newNote)
+                completion()
             } else {
-                self.save(task: newTitle, with: newNote)
+                self.save(newTitle, with: newNote)
             }
         }
         present(alert, animated: true)
     }
     
-    private func save(task: String, with note: String) {
+    private func save(_ task: String, with note: String) {
         StorageManager.shared.save(task, note, taskLists) { task in
             let rowIndex = IndexPath(row: curentTasks.index(of: task) ?? 0, section: 0)
             tableView.insertRows(at: [rowIndex], with: .automatic)

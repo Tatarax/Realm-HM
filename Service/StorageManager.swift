@@ -65,4 +65,24 @@ class StorageManager {
             print(error)
         }
     }
+    
+    func delete(task: Task) {
+        write {
+            realm.delete(task)
+        }
+    }
+    
+    func done(task: Task) {
+        write {
+            task.setValue(true, forKey: "isComplet")
+        }
+    }
+    
+    func edit(task: Task, name: String, note: String) {
+        write {
+            task.name = name
+            task.note = note
+        }
+    }
+    
 }
