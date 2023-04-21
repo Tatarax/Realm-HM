@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Список Задач-->
         <scene sceneID="bZw-2I-LhV">
             <objects>
                 <tableViewController id="6s5-2N-3vM" customClass="MainTaskViewController" customModule="Realm_HM" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                             <outlet property="delegate" destination="6s5-2N-3vM" id="AOb-xt-nxC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Mos-7E-oFj"/>
+                    <navigationItem key="navigationItem" title="Список Задач" id="Mos-7E-oFj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VS3-5F-zi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

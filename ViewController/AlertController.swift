@@ -41,7 +41,7 @@ extension UIAlertController {
             guard let newTitle = self.textFields?.first?.text else {return}
             guard !newTitle.isEmpty else {return}
             
-            if let newNote = self.textFields?.first?.text, !newNote.isEmpty {
+            if let newNote = self.textFields?.last?.text, !newNote.isEmpty {
                 completion(newTitle, newNote)
             } else {
                 completion(newTitle, "")
